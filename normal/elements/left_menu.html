@@ -1,0 +1,26 @@
+<script>
+	$(function(){
+		var list_item = $("#menu-list").find('.list-group-item');
+		var url = window.location.href;
+		list_item.each(function(index,ele){
+			var href = $(ele).attr("data-href");
+			regex = new RegExp(href);
+			if(regex.test(url)){
+				$(ele).addClass("active");
+			}
+		})
+
+	})
+</script>
+<div class="list-group" id="menu-list">
+	<a href="../index.html" data-href="index.html" class="list-group-item">
+		页面呈现相关
+	</a>
+	<a href="list.html" data-href="list.html" class="list-group-item">列表</a>
+	<a href="button.html" data-href="button.html" class="list-group-item">按钮</a>
+	<a href="dropdown.html" data-href="dropdown.html" class="list-group-item">下拉菜单</a>
+	<a href="input.html" data-href="input.html" class="list-group-item">输入框</a>
+	<a href="tabs.html" data-href="tabs.html" class="list-group-item">选项卡</a>
+	<a href="nav_bar.html" data-href="nav_bar.html" class="list-group-item">导航条</a>
+	<a href="form.html" data-href="form.html" class="list-group-item">表单</a>
+</div>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式整理</title>
+	<script src="js/jquery/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap/bootstrap.js"></script>
+	<script src="js/prettify.js"></script>
+	<style>
+		.mt10 {margin-top:10px;}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="css/prettify.css"/>
+	<script type="text/javascript">
+		$(function(){
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body>
+	<div class="bg-primary text-center" style="padding: 10px 0;">
+		<strong>css组件</strong>
+	</div>
+	<div class="container">
+		<h2>布局</h2>
+		<div class="row mt10">
+			<div class="col-md-4 text-center"><div class="bg-info">1/3</div></div>
+			<div class="col-md-8 text-center"><div class="bg-info">2/3</div></div>
+		</div>
+		<div class="row mt10">
+			<div class="col-md-6 text-center"><div class="bg-info">1/2</div></div>
+			<div class="col-md-6 text-center"><div class="bg-info">1/2</div></div>
+		</div>
+		<div class="row mt10">
+			<div class="col-md-3 text-center"><div class="bg-info">1/4</div></div>
+			<div class="col-md-9 text-center"><div class="bg-info">3/4</div></div>
+		</div>
+		<div class="row mt10">
+			<div class="col-md-3 text-center"><div class="bg-info">1/4</div></div>
+			<div class="col-md-9 text-center"><div class="bg-info">3/4</div></div>
+		</div>
+		<div class="row mt10">
+			<div class="col-md-9 text-center"><div class="bg-info">3/4</div></div>
+			<div class="col-md-3 text-center"><div class="bg-info">1/4</div></div>
+		</div>
+		<h4>HTML code</h4>
+<pre>
+	&lt;div class="row mt10"&gt;
+		&lt;div class="col-md-9 text-center"&gt;&lt;div class="bg-info"&gt;3/4&lt;/div&gt;&lt;/div&gt;
+		&lt;div class="col-md-3 text-center"&gt;&lt;div class="bg-info"&gt;1/4&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+</pre>
+	</div>
+</body>
+</html>

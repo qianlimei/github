@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>下拉菜单</title>
+	<script src="../js/jquery/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap/bootstrap.js"></script>
+	<script src="../js/prettify.js"></script>
+	<script src="../js/angular.js"></script>
+	<style>
+		.mt10 {
+			margin-top: 10px;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="../css/prettify.css"/>
+	<script type="text/javascript">
+		$(function () {
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body ng-app="">
+<div ng-include="'../header.html'"></div>
+<div class="container-fluid" style="margin-top:30px;">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<div ng-include="'left_menu.html'"></div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<h1>下拉菜单</h1>
+
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+				</ul>
+			</div>
+
+			<h4>HTML CODE</h4>
+<pre>
+&lt;div class="dropdown"&gt;
+	&lt;button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"&gt;
+		Dropdown
+		&lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+			<h4>下拉菜单右对齐</h4>
+
+			<p class="text-info">给dropdown-menu元素增加dropdown-menu-right类可以使下拉菜单右对齐</p>
+
+			<div class="dropdown visible-lg-inline-block">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<h4>HTML CODE</h4>
+<pre>
+&lt;div class="dropdown visible-lg-inline-block"&gt;
+	&lt;button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"&gt;
+		Dropdown
+		&lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1"&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div>
+</pre>
+			<h3>下拉菜单标题</h3>
+
+			<div class="dropdown visible-lg-inline-block">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+					<li role="presentation" class="dropdown-header">Dropdown header</li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+					<li role="presentation" class="dropdown-header">Dropdown header</li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<br/>
+			<br/>
+<pre>
+&lt;div class="dropdown visible-lg-inline-block"&gt;
+	&lt;button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"&gt;
+		Dropdown
+		&lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2"&gt;
+		&lt;li role="presentation" class="dropdown-header"&gt;Dropdown header&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li role="presentation" class="dropdown-header"&gt;Dropdown header&lt;/li&gt;
+		&lt;li role="presentation"&gt;&lt;a role="menuitem" tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+			<h2>按钮式下拉菜单</h2>
+
+			<h3>单按钮下拉菜单</h3>
+			<!-- Single button -->
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<br/>
+			<br/>
+<pre>
+&lt;div class="btn-group"&gt;
+	&lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+		Action &lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="divider"&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+			<h3>分裂式按钮下拉菜单</h3>
+			<!-- Split button -->
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger">Action</button>
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary">Action</button>
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">Action</button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-warning">Action</button>
+				<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info">Action</button>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-success">Action</button>
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<h4>HTML CODE</h4>
+<pre>
+&lt;div class="btn-group"&gt;
+	&lt;button type="button" class="btn btn-danger"&gt;Action&lt;/button&gt;
+	&lt;button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"&gt;
+		&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="divider"&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+			<h4>按钮式下拉菜单尺寸</h4>
+			<!-- Large button group -->
+			<div class="btn-group">
+				<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+					Large button <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					...
+				</ul>
+			</div>
+
+			<!-- Small button group -->
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+					Small button <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					...
+				</ul>
+			</div>
+
+			<!-- Extra small button group -->
+			<div class="btn-group">
+				<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+					Extra small button <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					...
+				</ul>
+			</div>
+			<br/>
+			<br/>
+<pre>
+
+&lt;div class="btn-group"&gt;
+	&lt;button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+		Large button &lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		...
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;div class="btn-group"&gt;
+	&lt;button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+		Small button &lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		...
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;div class="btn-group"&gt;
+	&lt;button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+		Extra small button &lt;span class="caret"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		...
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+			<h3>向上弹出式菜单</h3>
+			<p>给父元素加上dropup类</p>
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-default">Dropup</button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<br/>
+			<br/>
+<pre>
+&lt;div class="btn-group dropup"&gt;
+	&lt;button type="button" class="btn btn-default"&gt;Dropup&lt;/button&gt;
+	&lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+		&lt;span class="caret"&gt;&lt;/span&gt;
+		&lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;ul class="dropdown-menu" role="menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="divider"&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

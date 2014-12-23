@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式整理</title>
+	<script src="js/jquery/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap/bootstrap.js"></script>
+	<script src="js/prettify.js"></script>
+	<script src="js/angular.js"></script>
+	<style>
+		.mt10 {margin-top:10px;}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="css/prettify.css"/>
+	<script type="text/javascript">
+		$(function(){
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body ng-app="">
+<div  ng-include="'header.html'"></div>
+<div class="container-fluid" style="margin-top:30px;">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<div ng-include="'left_menu.html'"></div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<h3>字体颜色</h3>
+			<p class="text-muted">字体颜色</p>
+			<p class="text-info">字体颜色</p>
+			<p class="text-warning">字体颜色</p>
+			<p class="text-success">字体颜色</p>
+			<p class="text-danger">字体颜色</p>
+			<p class="text-primary">字体颜色</p>
+			<h4 class="mt10">HTML CODE</h4>
+<pre>
+&lt;p class="text-info"&gt;字体颜色&lt;/p&gt;
+&lt;p class="text-warning"&gt;字体颜色&lt;/p&gt;
+&lt;p class="text-success"&gt;字体颜色&lt;/p&gt;
+&lt;p class="text-danger"&gt;字体颜色&lt;/p&gt;
+&lt;p class="text-primary"&gt;字体颜色&lt;/p&gt;
+</pre>
+			<hr/>
+			<h4 class="mt10">背景色</h4>
+			<div class="bg-primary mt10 text-center">bg-primary</div>
+			<div class="bg-danger mt10 text-center">bg-danger</div>
+			<div class="bg-info mt10 text-center">bg-info</div>
+			<div class="bg-warning mt10 text-center">bg-warning</div>
+			<div class="bg-success mt10 text-center">bg-success</div>
+
+			<h4 class="mt10">HTML CODE</h4>
+<pre>
+&lt;div class="bg-success"&gt;bg-primary&lt;/div&gt;
+</pre>
+			<h3 class="mt10">分页</h3>
+			<nav>
+				<ul class="pagination">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</nav>
+			<h4>HTML CODE</h4>
+<pre>
+&lt;ul class="pagination"&gt;
+	&lt;li class="disabled"&gt;&lt;a href="#"&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;»&lt;/a&gt;&lt;/li&gt;
+&lt;/ul>
+</pre>
+			<h4>分页不同尺寸</h4>
+			<p class="text-info">通过pagination-lg和pagination-sm类控制分页尺寸</p>
+			<nav>
+				<ul class="pagination pagination-lg">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="pagination pagination-sm">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">»</a></li>
+				</ul>
+			</nav>
+<pre>
+&lt;ul class="pagination pagination-lg"&gt;...&lt;/ul&gt;
+&lt;ul class="pagination pagination-sm"&gt;...&lt;/ul&gt;
+</pre>
+			<h4>翻页</h4>
+			<nav>
+				<ul class="pager">
+					<li><a href="#">Previous</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+			</nav>
+<pre>
+&lt;ul class="pager"&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			<h4>翻页两端对齐</h4>
+			<nav>
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr; Older</a></li>
+					<li class="next"><a href="#">Newer &rarr;</a></li>
+				</ul>
+			</nav>
+<pre>
+&lt;ul class="pager"&gt;
+	&lt;li class="previous"&gt;&lt;a href="#"&gt;&larr; Older&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="next"&gt;&lt;a href="#"&gt;Newer &rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			<p class="text-warning">通过disabled类添加禁用样式</p>
+			<nav>
+				<ul class="pager">
+					<li class="previous disabled"><a href="#">&larr; Older</a></li>
+					<li class="next"><a href="#">Newer &rarr;</a></li>
+				</ul>
+			</nav>
+<pre>
+&lt;ul class="pager"&gt;
+	&lt;li class="previous disabled"&gt;&lt;a href="#"&gt;&larr; Older&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="next"&gt;&lt;a href="#"&gt;Newer &rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

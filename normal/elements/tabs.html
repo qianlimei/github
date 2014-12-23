@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>选项卡</title>
+	<script src="../js/jquery/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap/bootstrap.js"></script>
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="../js/response.js.js"></script>
+	<![endif]-->
+	<script src="../js/prettify.js"></script>
+	<script src="../js/angular.js"></script>
+	<style>
+		.mt10 {
+			margin-top: 10px;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="../css/prettify.css"/>
+	<script type="text/javascript">
+		$(function () {
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body ng-app="">
+<div ng-include="'../header.html'"></div>
+<div class="container-fluid" style="margin-top:30px;">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<div ng-include="'left_menu.html'"></div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<h1>导航</h1>
+			<h3>标签页</h3>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+				<li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+				<li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+				<li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">HOME</div>
+				<div role="tabpanel" class="tab-pane" id="profile">profile</div>
+				<div role="tabpanel" class="tab-pane" id="messages">messages</div>
+				<div role="tabpanel" class="tab-pane" id="settings">settings</div>
+			</div>
+			<br/>
+			<h4>HTML CODE</h4>
+<pre>
+&lt;ul class="nav nav-tabs" role="tablist"&gt;
+	&lt;li role="presentation" class="active"&gt;&lt;a href="#home" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#profile" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#messages" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#settings" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+	&lt;div role="tabpanel" class="tab-pane active" id="home"&gt;HOME&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="profile"&gt;profile&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="messages"&gt;messages&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="settings"&gt;settings&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			<h3>胶囊式标签页</h3>
+			<P CLASS="text-info">使用nav-pills类将标签页样式变成胶囊式</P>
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation" class="active"><a href="#home1" role="tab" data-toggle="tab">Home</a></li>
+				<li role="presentation"><a href="#profile1" role="tab" data-toggle="tab">Profile</a></li>
+				<li role="presentation"><a href="#messages1" role="tab" data-toggle="tab">Messages</a></li>
+				<li role="presentation"><a href="#settings1" role="tab" data-toggle="tab">Settings</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home1">HOME</div>
+				<div role="tabpanel" class="tab-pane" id="profile1">profile</div>
+				<div role="tabpanel" class="tab-pane" id="messages1">messages</div>
+				<div role="tabpanel" class="tab-pane" id="settings1">settings</div>
+			</div>
+			<br/>
+<pre>
+&lt;ul class="nav nav-pills" role="tablist"&gt;
+	&lt;li role="presentation" class="active"&gt;&lt;a href="#home1" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#profile1" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#messages1" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#settings1" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+	&lt;div role="tabpanel" class="tab-pane active" id="home1"&gt;HOME&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="profile1"&gt;profile&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="messages1"&gt;messages&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="settings1"&gt;settings&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			<h3>竖直排列的标签页</h3>
+			<p class="text-info">添加nav-stacked类</p>
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+				<li role="presentation" class="active"><a href="#home2" role="tab" data-toggle="tab">Home</a></li>
+				<li role="presentation"><a href="#profile2" role="tab" data-toggle="tab">Profile</a></li>
+				<li role="presentation"><a href="#messages2" role="tab" data-toggle="tab">Messages</a></li>
+				<li role="presentation"><a href="#settings2" role="tab" data-toggle="tab">Settings</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home2">HOME</div>
+				<div role="tabpanel" class="tab-pane" id="profile2">profile</div>
+				<div role="tabpanel" class="tab-pane" id="messages2">messages</div>
+				<div role="tabpanel" class="tab-pane" id="settings2">settings</div>
+			</div>
+			<br/>
+<pre>
+&lt;ul class="nav nav-pills nav-stacked" role="tablist"&gt;
+	&lt;li role="presentation" class="active"&gt;&lt;a href="#home2" role="tab" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#profile2" role="tab" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#messages2" role="tab" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#settings2" role="tab" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+	&lt;div role="tabpanel" class="tab-pane active" id="home2"&gt;HOME&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="profile2"&gt;profile&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="messages2"&gt;messages&lt;/div&gt;
+	&lt;div role="tabpanel" class="tab-pane" id="settings2"&gt;settings&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>输入框</title>
+	<script src="../js/jquery/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap/bootstrap.js"></script>
+	<!--[if lte IE 8]>
+	<script type="text/javascript" src="../js/response.js"></script>
+	<![endif]-->
+	<script src="../js/prettify.js"></script>
+	<script src="../js/angular.js"></script>
+	<style>
+		.mt10 {
+			margin-top: 10px;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="../css/prettify.css"/>
+	<script type="text/javascript">
+		$(function () {
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body ng-app="">
+<div ng-include="'../header.html'"></div>
+<div class="container-fluid" style="margin-top:30px;">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<div ng-include="'left_menu.html'"></div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<h1>输入框</h1>
+
+			<h3>基本实例</h3>
+
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Username">
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<input type="text" class="form-control">
+				<span class="input-group-addon">.00</span>
+			</div>
+			<br/>
+
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<input type="text" class="form-control">
+				<span class="input-group-addon">.00</span>
+			</div>
+			<h4>HTML CODE</h4>
+<pre>
+&lt;div class="input-group"&gt;
+	&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+	&lt;input type="text" class="form-control" placeholder="Username"&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+	&lt;input type="text" class="form-control"&gt;
+	&lt;span class="input-group-addon"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+	&lt;span class="input-group-addon"&gt;$&lt;/span&gt;
+	&lt;input type="text" class="form-control"&gt;
+	&lt;span class="input-group-addon"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+
+</pre>
+			<h3>尺寸</h3>
+
+			<p class="text-info">为input-group元素添加相应尺寸类。内部元素会自动调节自身尺寸</p>
+
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Username">
+			</div>
+			<br/>
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Username">
+			</div>
+			<br/>
+			<div class="input-group input-group-sm">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="Username">
+			</div>
+			<br/>
+<pre>
+&lt;div class="input-group input-group-lg"&gt;
+	&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+	&lt;input type="text" class="form-control" placeholder="Username"&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+	&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+	&lt;input type="text" class="form-control" placeholder="Username"&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group input-group-sm"&gt;
+	&lt;span class="input-group-addon"&gt;@&lt;/span&gt;
+	&lt;input type="text" class="form-control" placeholder="Username"&gt;
+&lt;/div&gt;
+</pre>
+			<h3>作为额外元素的按钮式下拉菜单</h3>
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default" tabindex="-1">Action</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+				<input type="text" class="form-control">
+			</div>
+			<br/>
+<pre>
+&lt;div class="input-group"&gt;
+	&lt;div class="input-group-btn"&gt;
+		&lt;button type="button" class="btn btn-default" tabindex="-1"&gt;Action&lt;/button&gt;
+		&lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1"&gt;
+			&lt;span class="caret"&gt;&lt;/span&gt;
+			&lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;ul class="dropdown-menu" role="menu"&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="divider"&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+</pre>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

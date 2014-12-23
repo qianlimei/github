@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>表单</title>
+	<script src="../js/jquery/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap/bootstrap.js"></script>
+	<script src="../js/prettify.js"></script>
+	<!--[if lte IE 8]>
+	<script type="text/javascript" src="../js/response.js"></script>
+	<![endif]-->
+	<script src="../js/angular.js"></script>
+	<style>
+		.mt10 {
+			margin-top: 10px;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/bootstrap/bootstrap.css"/>
+	<link rel="stylesheet" href="../css/prettify.css"/>
+	<script type="text/javascript">
+		$(function () {
+			$('pre').addClass('prettyprint linenums');
+			prettyPrint();
+		});
+	</script>
+</head>
+<body ng-app="">
+<div ng-include="'../header.html'"></div>
+<div class="container-fluid" style="margin-top:30px;">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<div ng-include="'left_menu.html'"></div>
+		</div>
+		<div class="col-md-9 col-sm-8">
+			<form role="form">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">File input</label>
+					<input type="file" id="exampleInputFile">
+					<p class="help-block">Example block-level help text here.</p>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Check me out
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<br/>
+<pre>
+&lt;form role="form"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+		&lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+		&lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+		&lt;input type="file" id="exampleInputFile"&gt;
+		&lt;p class="help-block"&gt;Example block-level help text here.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="checkbox"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox"&gt; Check me out
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+			<h3>内联表单</h3>
+			<p class="text-info"><b>为 form 元素添加 .form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件。只适用于视口（viewport）至少在 768px 宽度时（视口宽度再小的话就会使表单折叠）。</b></p>
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputEmail2">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">@</div>
+						<input class="form-control" type="email" placeholder="Enter email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputPassword2">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Remember me
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default">Sign in</button>
+			</form>
+			<br/>
+<pre>
+&lt;form class="form-inline" role="form"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label class="sr-only" for="exampleInputEmail2"&gt;Email address&lt;/label&gt;
+		&lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;div class="input-group"&gt;
+			&lt;div class="input-group-addon"&gt;@&lt;/div&gt;
+			&lt;input class="form-control" type="email" placeholder="Enter email"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label class="sr-only" for="exampleInputPassword2"&gt;Password&lt;/label&gt;
+		&lt;input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"&gt;
+	&lt;/div&gt;
+	&lt;div class="checkbox"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox"&gt; Remember me
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
+&lt;/form>
+</pre>
+			<h3>水平排列表单</h3>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Sign in</button>
+					</div>
+				</div>
+			</form>
+<pre>
+&lt;form class="form-horizontal" role="form"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="inputEmail3" class="col-sm-2 control-label"&gt;Email&lt;/label&gt;
+		&lt;div class="col-sm-10"&gt;
+			&lt;input type="email" class="form-control" id="inputEmail3" placeholder="Email"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="inputPassword3" class="col-sm-2 control-label"&gt;Password&lt;/label&gt;
+		&lt;div class="col-sm-10"&gt;
+			&lt;input type="password" class="form-control" id="inputPassword3" placeholder="Password"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;div class="col-sm-offset-2 col-sm-10"&gt;
+			&lt;div class="checkbox"&gt;
+				&lt;label&gt;
+					&lt;input type="checkbox"&gt; Remember me
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;div class="col-sm-offset-2 col-sm-10"&gt;
+			&lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+			<h3>多选和单选框(默认)</h3>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="">
+					Option one is this and that&mdash;be sure to include why it's great
+				</label>
+			</div>
+			<div class="checkbox disabled">
+				<label>
+					<input type="checkbox" value="" disabled>
+					Option two is disabled
+				</label>
+			</div>
+
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					Option one is this and that&mdash;be sure to include why it's great
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+					Option two can be something else and selecting it will deselect option one
+				</label>
+			</div>
+			<div class="radio disabled">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+					Option three is disabled
+				</label>
+			</div>
+<pre>
+&lt;div class="checkbox"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" value=""&gt;
+		Option one is this and that&mdash;be sure to include why it's great
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="checkbox disabled"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox" value="" disabled&gt;
+		Option two is disabled
+	&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+		Option one is this and that&mdash;be sure to include why it's great
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+		Option two can be something else and selecting it will deselect option one
+	&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="radio disabled"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+		Option three is disabled
+	&lt;/label&gt;
+&lt;/div&gt;
+
+</pre>
+			<h3>内联单选和多选</h3>
+			<div class="row">
+				<div class="col-xs-12">
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+					</label>
+				</div>
+				<div class="col-xs-12">
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+					</label>
+				</div>
+			</div>
+			<h3>静态控件</h3>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<p class="form-control-static">email@example.com</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+					</div>
+				</div>
+			</form>
+<pre>
+&lt;form class="form-horizontal" role="form"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label class="col-sm-2 control-label"&gt;Email&lt;/label&gt;
+		&lt;div class="col-sm-10"&gt;
+			&lt;p class="form-control-static"&gt;email@example.com&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="inputPassword" class="col-sm-2 control-label"&gt;Password&lt;/label&gt;
+		&lt;div class="col-sm-10"&gt;
+			&lt;input type="password" class="form-control" id="inputPassword" placeholder="Password"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+			<h3>校验状态</h3>
+			<p>添加 .has-warning、.has-error 或 .has-success 类到这些控件的父元素可添加控件的校验样式</p>
+			<div class="form-group has-success">
+				<label class="control-label" for="inputSuccess1">Input with success</label>
+				<input type="text" class="form-control" id="inputSuccess1">
+			</div>
+			<div class="form-group has-warning">
+				<label class="control-label" for="inputWarning1">Input with warning</label>
+				<input type="text" class="form-control" id="inputWarning1">
+			</div>
+			<div class="form-group has-error">
+				<label class="control-label" for="inputError1">Input with error</label>
+				<input type="text" class="form-control" id="inputError1">
+			</div>
+			<div class="has-success">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" id="checkboxSuccess" value="option1">
+						Checkbox with success
+					</label>
+				</div>
+			</div>
+			<div class="has-warning">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" id="checkboxWarning" value="option1">
+						Checkbox with warning
+					</label>
+				</div>
+			</div>
+			<div class="has-error">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" id="checkboxError" value="option1">
+						Checkbox with error
+					</label>
+				</div>
+			</div>
+<pre>
+&lt;div class="form-group has-success"&gt;
+	&lt;label class="control-label" for="inputSuccess1"&gt;Input with success&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputSuccess1"&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-warning"&gt;
+	&lt;label class="control-label" for="inputWarning1"&gt;Input with warning&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputWarning1"&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-error"&gt;
+	&lt;label class="control-label" for="inputError1"&gt;Input with error&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputError1"&gt;
+&lt;/div&gt;
+&lt;div class="has-success"&gt;
+	&lt;div class="checkbox"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox" id="checkboxSuccess" value="option1"&gt;
+			Checkbox with success
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="has-warning"&gt;
+	&lt;div class="checkbox"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox" id="checkboxWarning" value="option1"&gt;
+			Checkbox with warning
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="has-error"&gt;
+	&lt;div class="checkbox"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox" id="checkboxError" value="option1"&gt;
+			Checkbox with error
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+			<h3>添加额外图标</h3>
+			<div class="form-group has-success has-feedback">
+				<label class="control-label" for="inputSuccess2">Input with success</label>
+				<input type="text" class="form-control" id="inputSuccess2">
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+			<div class="form-group has-warning has-feedback">
+				<label class="control-label" for="inputWarning2">Input with warning</label>
+				<input type="text" class="form-control" id="inputWarning2">
+				<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="control-label" for="inputError2">Input with error</label>
+				<input type="text" class="form-control" id="inputError2">
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+<pre>
+&lt;div class="form-group has-success has-feedback"&gt;
+	&lt;label class="control-label" for="inputSuccess2"&gt;Input with success&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputSuccess2"&gt;
+	&lt;span class="glyphicon glyphicon-ok form-control-feedback"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-warning has-feedback"&gt;
+	&lt;label class="control-label" for="inputWarning2"&gt;Input with warning&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputWarning2"&gt;
+	&lt;span class="glyphicon glyphicon-warning-sign form-control-feedback"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="form-group has-error has-feedback"&gt;
+	&lt;label class="control-label" for="inputError2"&gt;Input with error&lt;/label&gt;
+	&lt;input type="text" class="form-control" id="inputError2"&gt;
+	&lt;span class="glyphicon glyphicon-remove form-control-feedback"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+			<h3>为水平排列的表单和内联表单设置可选的图标</h3>
+			<form class="form-horizontal" role="form">
+				<div class="form-group has-success has-feedback">
+					<label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="inputSuccess3">
+						<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+					</div>
+				</div>
+			</form>
+<pre>
+&lt;form class="form-horizontal" role="form"&gt;
+	&lt;div class="form-group has-success has-feedback"&gt;
+		&lt;label class="control-label col-sm-3" for="inputSuccess3"&gt;Input with success&lt;/label&gt;
+		&lt;div class="col-sm-9"&gt;
+			&lt;input type="text" class="form-control" id="inputSuccess3"&gt;
+			&lt;span class="glyphicon glyphicon-ok form-control-feedback"&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form>
+</pre>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
